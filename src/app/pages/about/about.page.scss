@@ -1,0 +1,81 @@
+h2,
+h5,
+p {
+    color: #1d1d1d;
+}
+
+//Mobile
+@media (max-width: 768px) {
+    ion-grid {
+        padding: 1rem;
+    }
+
+    .ie-btn-gradient {
+        color: #1d1d1d;
+        --background: linear-gradient(154deg, #eeec00 0%, #e3be00 30%, #dea800 50%);
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .ie-btn-clear {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    h5 {
+        padding-right: 10%;        
+    }
+
+    .ie-logo {        
+        object-fit: cover;
+        padding-right: 5%;
+    }
+
+    .ie-stack {
+        padding-right: 5%;
+        width: 90%;
+    }
+
+    .ie-design {        
+        width: 80%;
+    }
+}
+
+//Desktop
+@media (min-width: 768px) {    
+    ion-grid {
+        padding: 4rem;
+    }
+
+    .ie-img {
+        justify-content: center;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .red {        
+        align-content: center;        
+    }
+    .ie-mock {
+        height: 150px;
+        width: 150px;
+        border-radius: 200px;
+        border: 5px solid black;     
+        object-fit: cover;
+        
+    }
+    .about-row {        
+        justify-content: center;
+        padding-bottom: 10vh;
+        background-image: linear-gradient(#000, #000);
+        background-size: 5px 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }    
+
+    .left-content {        
+        text-align: right;
+    }
+    
+    .right-content {
+        text-align: left;
+    }
+}
