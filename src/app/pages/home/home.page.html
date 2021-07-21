@@ -1,0 +1,106 @@
+<ion-content>
+    
+<div class="row">
+
+    <div class="hero-header" >
+        <img src="../../../assets/images/Headshot.jpg">   
+        
+    </div>
+    <div class="yelloGradientBox hero-header">
+        
+        <ion-col>
+
+            <h1>I specialize in Front-end Web Development</h1>
+            <p>I'm a passionate Web Developer, Programmer, Designer, Entrepreneur who believes in better services and better experiences through valid ethnographic research and day to day use. </p>
+            <ion-button class="pdf-btn" color="light" shape="round">PDF Resume</ion-button>
+            
+            <span class="social-buttons">
+                
+                
+                   <ion-col  col-4>
+                    <ion-button (click)="linkedinSite()" fill="clear">                        
+                        <ion-icon color="dark" slot="icon-only" name="logo-linkedin"></ion-icon>
+                    </ion-button>
+                   </ion-col>
+                   <ion-col  col-4>
+                    <ion-button (click)="githubSite()" fill="clear">                        
+                        <ion-icon color="dark" slot="icon-only" name="logo-github"></ion-icon>
+                    </ion-button>
+                   </ion-col>
+                   <ion-col  col-4>
+                    <ion-button (click)="behnaceSite()" fill="clear">                        
+                        <ion-icon color="dark" slot="icon-only" name="logo-behance"></ion-icon>
+                    </ion-button>
+                   </ion-col>
+             
+             </span>
+
+
+        </ion-col>
+        
+       
+    </div> 
+
+    
+</div>
+<section class="work">
+    <ion-row class="work-header">
+        <h2 class="section-title">Latest Works</h2>
+    </ion-row>
+   
+    <div routerLink="/work-kc">
+        <img class="img-work-KC" src="../../../assets/images/KC screen.jpg">
+       <div class="img-text-KC">
+
+           <h6>Personal Project 2021</h6>
+           <h3>Kingdom Club</h3>
+           <p>See Case</p>
+       </div>
+    </div>
+    <div routerLink="/work-ie">
+        <img class="img-work-IE" src="../../../assets/images/IE screen.jpg">
+        <div class="img-text-IE">
+
+            <h6>Personal Project 2017</h6>
+            <h3>Intl Excel Student Network</h3>
+            <p>See Case</p>
+        </div>
+    </div>
+    <div routerLink="/work-ae">
+        <img class="img-work-AE" src="../../../assets/images/AE screen.jpg">
+        <div class="img-text-AE">
+
+            <h6>Personal Project 2014</h6>
+            <h3>Afro Excel Student Blogging Platform</h3>
+            <p  
+            
+            #caseBtn (mouseenter)="glowEffect=true" (mouseleave)="hoverEffect($event)"
+            fill="clear" color="light" class="dropdown-btn" routerLink="/work" 
+            routerDirection="root" routerLinkActive="active-item"
+            >See Case</p>
+        </div>
+    </div>
+
+</section>
+
+<section class="contact">
+    <ion-row>
+        <h2 class="section-title">Get in touch today!</h2>
+    </ion-row>
+    <ion-grid centre>
+        <ion-row>
+            <ion-col class="bottom-btn-align" >
+                <ion-button class="bottom-btn" justify-content-end align-items-end shape="round" >Send Email</ion-button>
+            </ion-col>
+            <ion-col >
+                <h6>647-297-1557</h6>
+                <h3>Montreal, QC</h3>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+</section>
+
+</ion-content>
+
+
