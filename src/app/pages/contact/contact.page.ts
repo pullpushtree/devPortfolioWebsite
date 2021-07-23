@@ -1,11 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { EmailComposer } from '@ionic-native/email-composer/ngx';
-import {
-  FormGroup,
-  FormBuilder,
-  Validators,
-  FormControl,
-} from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -19,8 +12,6 @@ export class ContactPage implements OnInit {
   submitted: boolean;
 
   constructor(
-    private emailComposer: EmailComposer,
-    public formBuilder: FormBuilder
   ) {}
 
   onSubmit() {
@@ -38,10 +29,8 @@ export class ContactPage implements OnInit {
       body: this.body
     };
 
-    this.emailComposer.open(msgPayload);
     console.log('msgPayload value ', msgPayload);
 
-    //debugger;
   }
 
   ngOnInit() {}
