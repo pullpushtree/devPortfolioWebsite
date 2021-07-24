@@ -12,4 +12,11 @@ export class WorkKcPage implements OnInit {
   ngOnInit() {
   }
 
+  openGitHub(url:string){
+    window.open(url, '_system', 'location=yes');
+  }
+
+  openBehnace(url:string){
+    window.open(url, '_system', 'location=yes');
+  }
 }
