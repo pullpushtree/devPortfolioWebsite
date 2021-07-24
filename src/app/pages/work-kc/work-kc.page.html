@@ -24,12 +24,24 @@
       <ion-col>
         <ion-row class="kc-btns">
           
-          <ion-button class="kc-btn-gradient" justify-content-end align-items-end shape="round" >Code            
-            <ion-icon color="light" slot="icon-only" name="logo-github"></ion-icon>
+          <ion-button 
+            (click)="openGitHub('https://github.com/pullpushtree/kingdom-club/')"
+            class="kc-btn-gradient" 
+            justify-content-end 
+            align-items-end 
+            shape="round" >
+            Code            
+            <ion-icon color="light" slot="icon-only" name="logo-github" ></ion-icon>
           </ion-button>
 
-          <ion-button class="kc-btn-clear" fill="outline" color="light" shape="round" >Design            
-            <ion-icon color="light" slot="icon-only" name="logo-behance"></ion-icon>
+          <ion-button 
+          (click)="openBehnace('https://www.behance.net/gallery/124063985/Kingdom-Club')" 
+            class="kc-btn-clear" 
+            fill="outline" 
+            color="light" 
+            shape="round" >
+            Design            
+            <ion-icon color="medium" slot="icon-only" name="logo-behance"></ion-icon>
           </ion-button>
 
         </ion-row >

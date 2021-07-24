@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+
+
+//DESKTOP SCREEN
+@media (min-width: 768px) {
+    
+    #contactContainer {
+        width:  80%;
+        display:  flex ;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+        background-image: linear-gradient(154deg, #eeec00 0%, #e3be00 30%, #dea800 50%);
+    }
+    
+    #contacForm {
+        background:  #ffffff;
+        padding: 0px 50px 50px 50px;
+        border-radius: 5px;
+        color: rgb(39, 39, 46);
+    }
+    
+    .input {
+        width:  80%;
+        font-size: 18px;
+        margin: 10px 0; 
+    
+        padding: 7px 15px;
+        border: none;
+        color: #fff;
+    }
+    
+    .form-title {
+        font-size: 48px;
+        text-align: center; 
+        margin-bottom: 20px;
+    }
+    
+    button {
+        font-size: 18px;
+        border-radius: 5px;
+       
+        padding: 7px 15px;
+        color: #fff;
+        transition: background-color 100mx;
+    }
+    
+    button:hover {
+        
+        cursor: pointer;
+    }
+
+    .button-gradient {        
+        color: #1d1d1d;
+        --background: linear-gradient(154deg, #eeec00 0%, #e3be00 30%, #dea800 50%);        
+        color: linear-gradient(154deg, #eeec00 0%, #e3be00 30%, #dea800 50%);
+    }
+    
+}
+
+//MOBILE SCREEN
+@media (max-width: 768px) {
+    #contactContainer {
+        
+        display:  flex ;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+        background-image: linear-gradient(154deg, #eeec00 0%, #e3be00 30%, #dea800 50%);
+    }
+    
+    #contacForm {
+        background:  #ffffff;
+        padding: 0px 30px 30px 30px;
+        //border-radius: 5px;
+        color: rgb(39, 39, 46);        
+    }
+    
+    .input {
+        width:  80%;
+        font-size: 18px;
+        margin: 10px 0;
+        padding: 7px 15px;
+        border: none;
+        color:lightslategray
+    }
+    
+    .form-title {
+        font-size: 48px;
+        text-align: center; 
+        margin-bottom: 20px;
+    }
+    
+    .button-gradient {        
+        color: #1d1d1d;
+        --background: linear-gradient(154deg, #eeec00 0%, #e3be00 30%, #dea800 50%);        
+        color: linear-gradient(154deg, #eeec00 0%, #e3be00 30%, #dea800 50%);
+    }
+}

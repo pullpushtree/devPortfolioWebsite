@@ -1,3 +1,74 @@
 <ion-content>
-contact
+  <section id="contactContainer">
+    <form id="contacForm" (ngSubmit)="onSubmit()" #contactForm="ngForm">
+      <br />
+
+      <h2 class="form-title">Get In Touch</h2>
+      <ion-item>
+        <ion-label position="floating">Name</ion-label>
+        <ion-input
+          type="text"
+          name="fname"
+          [(ngModel)]="fname"
+          class="input"
+          #nameInput="ngModel"
+          required>
+        </ion-input>
+        <div
+          class="help is-error"
+          *ngIf="nameInput.invalid && nameInput.touched">
+          Your name is required.
+        </div>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input
+          type="email"
+          name="emailAddress"
+          [(ngModel)]="emailAddress"
+          #emailInput="ngModel"
+          class="input"
+          required
+          email>
+        </ion-input>
+        <div
+          class="help is-error"
+          *ngIf="emailInput.invalid && emailInput.touched">
+          Your email is required.
+        </div>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Message</ion-label>
+        <ion-textarea
+          type="text"
+          name="body"
+          [(ngModel)]="body"
+          class="input"
+          #bodyInput="ngModel"
+          required></ion-textarea>
+        <div
+          class="help is-error"
+          *ngIf="bodyInput.invalid && bodyInput.touched">
+          Your message is required.
+        </div>
+        
+      </ion-item>
+
+      <ion-row>
+        <ion-col>
+          <ion-button
+            shape="round" 
+            type="submit"
+            class="button-gradient"
+            expand="block"
+            [disabled]="contactForm.invalid">
+            Send
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </section>
+
 </ion-content>

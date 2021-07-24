@@ -18,17 +18,17 @@
                 
                 
                    <ion-col  col-4>
-                    <ion-button (click)="linkedinSite()" fill="clear">                        
-                        <ion-icon color="dark" slot="icon-only" name="logo-linkedin"></ion-icon>
+                    <ion-button (click)="openLinkedin('https://www.linkedin.com/in/serge-badio-b335b6a7/')" fill="clear">                        
+                        <ion-icon color="dark" slot="icon-only" name="logo-linkedin" ></ion-icon>
                     </ion-button>
                    </ion-col>
                    <ion-col  col-4>
-                    <ion-button (click)="githubSite()" fill="clear">                        
-                        <ion-icon color="dark" slot="icon-only" name="logo-github"></ion-icon>
+                    <ion-button (click)="openGitHub('https://github.com/pullpushtree/')" fill="clear">                        
+                        <ion-icon color="dark" slot="icon-only" name="logo-github" ></ion-icon>
                     </ion-button>
                    </ion-col>
                    <ion-col  col-4>
-                    <ion-button (click)="behnaceSite()" fill="clear">                        
+                    <ion-button (click)="openBehnace('https://www.behance.net/gallery/124063985/Kingdom-Club')" fill="clear">                        
                         <ion-icon color="dark" slot="icon-only" name="logo-behance"></ion-icon>
                     </ion-button>
                    </ion-col>
@@ -88,7 +88,7 @@
         <h2 class="section-title">Get in touch today!</h2>
     </ion-row>
     <ion-grid centre>
-        <ion-row>
+        <ion-row class="bottom-align-content">
             <ion-col class="bottom-btn-align" >
                 <ion-button class="bottom-btn" justify-content-end align-items-end shape="round" >Send Email</ion-button>
             </ion-col>

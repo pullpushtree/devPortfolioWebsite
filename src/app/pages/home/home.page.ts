@@ -29,16 +29,16 @@ export class HomePage implements OnInit {
     }
   }
 
-  linkedInSite(){
-
+  openLinkedin(url:string){
+    window.open(url, '_system', 'location=yes');
   }
 
-  githubSite(){
-
+  openGitHub(url:string){
+    window.open(url, '_system', 'location=yes');
   }
 
-  behnaceSite(){
-
+  openBehnace(url:string){
+    window.open(url, '_system', 'location=yes');
   }
 
 }
