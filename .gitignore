@@ -30,9 +30,6 @@ npm-debug.log*
 /plugins
 /www
 
-/src/environments
-/environments
-.env
-.environments
-*.environment.prod.ts
-*.environment.ts
+**/environments
+src/environments
+environments
