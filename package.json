@@ -1,8 +1,8 @@
 {
-  "name": "devPortfolioWebsite",
+  "name": "devportfoliowebsite",
   "version": "0.0.1",
-  "author": "Serge Badop ",
-  "homepage": "sergebadio.com",
+  "author": "Serge Badop",
+  "homepage": "http://sergebadio.com",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -15,6 +15,7 @@
   "dependencies": {
     "@angular/common": "~12.0.1",
     "@angular/core": "~12.0.1",
+    "@angular/fire": "^6.1.5",
     "@angular/forms": "~12.0.1",
     "@angular/platform-browser": "~12.0.1",
     "@angular/platform-browser-dynamic": "~12.0.1",
@@ -22,6 +23,7 @@
     "@capacitor/core": "3.1.1",
     "@ionic/angular": "^5.5.2",
     "cordova-android": "9.1.0",
+    "firebase": "^8.8.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.4"
@@ -80,5 +82,14 @@
     "platforms": [
       "android"
     ]
+  },
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pullpushtree/devPortfolioWebsite.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pullpushtree/devPortfolioWebsite/issues"
   }
 }
