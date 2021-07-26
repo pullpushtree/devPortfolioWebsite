@@ -149,12 +149,9 @@ p {
         padding-left: 25px;
         padding-right: 25px;
     }
-    .red {        
-        align-content: center;        
-    }
     .bubble {
-        height: 150px;
-        width: 150px;
+        height: 200px;
+        width: 200px;
         border-radius: 200px;
         border: 5px solid black;     
         object-fit: cover;
@@ -175,5 +172,9 @@ p {
     
     .right-content {
         text-align: left;
+    }
+    .stack-img {
+        max-height: 45px;
+        display: table-column;
     }
 }
