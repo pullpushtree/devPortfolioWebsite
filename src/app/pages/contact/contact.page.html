@@ -1,43 +1,44 @@
 <ion-content>
   <section id="contactContainer">
-    <form id="contacForm" (ngSubmit)="onSubmit()" #contactForm="ngForm">
-      <br />
-
+    <form id="contacForm" (ngSubmit)="onSubmit(contactForm.value); contactForm.reset()" #contactForm="ngForm" novalidate>
       <h3>Contact Me</h3>
+      <br/>
       <h6><strong>Phone: </strong> 647-297-1557</h6>
       <h6><strong>Email: </strong> sergebadio@hotmail.com</h6>
       <h6><strong>Location: </strong> Montreal, QC</h6>
-
+      <br/>
       <ion-item>
         <ion-label position="floating">Name</ion-label>
         <ion-input
+          id="fname"
+          required minlength="2"
           type="text"
           name="fname"
-          [(ngModel)]="fname"
-          class="input"
+          ngModel
           #nameInput="ngModel"
           required>
         </ion-input>
         <div
-          class="help is-error"
-          *ngIf="nameInput.invalid && nameInput.touched">
-          Your name is required.
-        </div>
+        *ngIf="nameInput.invalid && nameInput.touched">
+          <div *ngIf="nameInput.errors?.required">
+            Name is required.
+          </div>
+        </div>        
+        
       </ion-item>
-
       <ion-item>
         <ion-label position="floating">Email</ion-label>
         <ion-input
+          id="emailAddress"
           type="email"
           name="emailAddress"
-          [(ngModel)]="emailAddress"
+          ngModel
           #emailInput="ngModel"
-          class="input"
           required
           email>
         </ion-input>
         <div
-          class="help is-error"
+          
           *ngIf="emailInput.invalid && emailInput.touched">
           Your email is required.
         </div>
@@ -46,14 +47,17 @@
       <ion-item>
         <ion-label position="floating">Message</ion-label>
         <ion-textarea
+          id="body"
           type="text"
           name="body"
-          [(ngModel)]="body"
-          class="input"
+          ngModel       
           #bodyInput="ngModel"
-          required></ion-textarea>
+          required
+          auto-grow="true"
+          maxLength="500"
+          ></ion-textarea>
         <div
-          class="help is-error"
+          
           *ngIf="bodyInput.invalid && bodyInput.touched">
           Your message is required.
         </div>

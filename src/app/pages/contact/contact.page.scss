@@ -16,7 +16,6 @@ h6 {
 }
 
 p {
-   //margin: 0px;
     font-weight: 400;
     font-size: 18px !important;
     font-family: "Raleway", sans-serif;    
@@ -41,18 +40,18 @@ p {
         padding: 0px 50px 50px 50px;
         border-radius: 5px;
         color: rgb(39, 39, 46);
+        width: 500px;
     }
     
     .input {
         width:  80%;
         font-size: 18px;
         margin: 10px 0; 
-    
         padding: 7px 15px;
         border: none;
         color: #fff;
     }
-    
+
     .form-title {
         font-size: 48px;
         text-align: center; 
