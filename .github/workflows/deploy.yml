@@ -1,0 +1,28 @@
+name: Firebase Continuous Deployment  
+
+on: 
+  push: 
+    branches: [ main ]
+
+    jobs: 
+      deploy:
+        runs-on: ubuntu-latest
+        steps:
+          - uses: actions/checkout@main
+          - uses: actions/setup-node@main
+          with:
+            node-version: 12
+            - run: npm ci
+            - run: npm run build
+            - uses: w9jds/firebase-action@main
+            with: 
+              args: deploy --only hosting
+              env:
+                FIREBASE_TOKEN: ${{ FIREBASE_SERVICE_ACCOUNT_DEVPORTFOLIOWEBSITE }}
+            # with:
+            #   repoToken: '${{ secrets.GITHUB_TOKEN }}'
+            #   firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_DEVPORTFOLIOWEBSITE }}'
+            #   channelId: live
+            #   projectId: devportfoliowebsite
+            # env:
+            #   FIREBASE_CLI_PREVIEWS: hostingchannels
