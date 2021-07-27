@@ -3,12 +3,12 @@ export const environment = {
   hostURL: 'http://localhost:5000/',
   envName: 'prod',  
   firebaseConfig: {
-    apiKey: "AIzaSyCEocL3ubYqmlk-CFiAi71Y5r5GElH6jnY",
-    authDomain: "devportfoliowebsite.firebaseapp.com",
-    projectId: "devportfoliowebsite",
-    storageBucket: "devportfoliowebsite.appspot.com",
-    messagingSenderId: "113915178274",
-    appId: "1:113915178274:web:4a144b5923d28309e3c97b",
-    measurementId: "G-M04XCDY6L8"
+    apiKey: "AIzaSyA8L7oVn-Su410wA24XGDSsTxMS-8SGyt8",
+    authDomain: "devportfoliowebsite-prod.firebaseapp.com",
+    projectId: "devportfoliowebsite-prod",
+    storageBucket: "devportfoliowebsite-prod.appspot.com",
+    messagingSenderId: "308686301524",
+    appId: "1:308686301524:web:405b670e41c956f77e80c1",
+    measurementId: "G-RTX2PQMNWY"
   }  
 };
