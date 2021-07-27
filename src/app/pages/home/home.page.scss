@@ -25,16 +25,11 @@
         padding-right: 5%;
     }
     div {
-        display: inline-block;
+        display: inline-grid;
         img {
             height: 100vh;
             width: 100%;
             object-fit: cover;
-        }
-        h6,
-        h3,
-        p {
-            padding-left: 15px;
         }
         h1 {
             font-size: 3rem;
@@ -60,6 +55,11 @@
             height: fit-content;
             object-fit: cover;
         }
+        h6,
+        h3,
+        p {
+            padding-left: 15px;
+        }
         h2 {
             position: absolute;
             left: 50%;
@@ -68,6 +68,7 @@
             font-weight: 900;
             font-size: 30px;
             padding-top: 10px;
+            margin: 0px;
         }
         h3 {
             margin: 0px;
@@ -99,6 +100,15 @@
         margin-bottom: 0%;
         justify-content: center;
 
+        h2 {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -200%);
+            font-family: "Roboto", serif;
+            font-weight: 900;
+            font-size: 30px;
+            margin: 0px;
+        }
 
         h3 {
             margin: 0px;

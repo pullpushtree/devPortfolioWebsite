@@ -8,9 +8,6 @@ import { ToastController } from '@ionic/angular';
   styleUrls: ['./contact.page.scss'],
 })
 export class ContactPage implements OnInit {
-  emailAddress: string;
-  fname: string;
-  body: string;
   submitted: boolean;
 
   constructor(
@@ -21,13 +18,12 @@ export class ContactPage implements OnInit {
 
   ngOnInit() {}
 
-  onSubmit() {
+  onSubmit(val : any ) {
     this.submitted = true;
     let msgPayload = {
-      name: this.fname,
-      email: this.emailAddress,
-      body: this.body,
-      isHtml: false,
+      name: val.fname,
+      email: val.emailAddress,
+      body: val.body
     };
 
     console.log('msgPayload value ', msgPayload);
@@ -40,6 +36,7 @@ export class ContactPage implements OnInit {
       })
       .catch((err) => {
         this.messageFailed();
+        console.log("ERROR => ", err)
       });
   }
 

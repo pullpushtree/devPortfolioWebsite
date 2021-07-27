@@ -5,8 +5,8 @@
     .header {
         display: flex;
         background: #fff;
-        padding-left: 40px;
-        padding-right: 40px;
+        padding-right: 10%;
+        padding-left: 10%;
         color: #2A2A2A;
     }
 }
@@ -19,8 +19,6 @@
         display: none;
     }
 }
-
-
 
 .active-item {
     border-bottom: 3px solid var(--ion-color-medium);
