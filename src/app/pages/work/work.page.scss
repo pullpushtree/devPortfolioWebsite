@@ -12,7 +12,7 @@
     --background: linear-gradient(154deg, #eeec00 0%, #e3be00 30%, #dea800 50%);
 }
 
-//DESKTOP SCREE
+//DESKTOP SCREEN
 @media (min-width: 768px) {
    
     div {
@@ -42,7 +42,7 @@
         margin-bottom: 5%;
         display: flex;        
         color: #2a2a2a;
-        
+        justify-content: space-evenly;
         img {
             padding: 3%;
             height: fit-content;
