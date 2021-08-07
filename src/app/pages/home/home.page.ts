@@ -1,6 +1,8 @@
+import { convertActionBinding } from '@angular/compiler/src/compiler_util/expression_converter';
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { AngularFireStorage } from '@angular/fire/storage';
 import {  Downloader,  DownloadRequest,  NotificationVisibility,} from '@ionic-native/downloader/ngx';
+import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer/ngx';
 import { File } from '@ionic-native/file/ngx';
 import { Platform } from '@ionic/angular';
 
@@ -15,6 +17,7 @@ export class HomePage implements OnInit {
 
   constructor(
     private downloader: Downloader,
+    private transfer: FileTransfer,
     private file: File,
     private platform: Platform,
     private afStrage: AngularFireStorage
@@ -56,24 +59,26 @@ export class HomePage implements OnInit {
     await this.platform.ready();
     await this.afStrage.storage.ref('Serge_Badio_Jr_Resume.pdf')      
     .getDownloadURL()
-    .then((docUrl) => {        
+    .then((docUrl) => {  
+      
+      let path = null;
+      if(this.platform.is('ios')) {
+        path = this.file.documentsDirectory;
+      } else {
+        path = this.file.dataDirectory;
+      }
+
       let request: DownloadRequest = {
         uri: docUrl,
         title: 'Serge Badio Jr Resume',
         description: 'PDF Resume',
         mimeType: 'application/pdf',
         visibleInDownloadsUi: true,
-        notificationVisibility: NotificationVisibility.VisibleNotifyCompleted,         
+        notificationVisibility: NotificationVisibility.VisibleNotifyCompleted,        
         destinationInExternalFilesDir: {
-          dirType: 'Download',
-          subPath: 'my.pdf'
-        },
-        destinationInExternalPublicDir: {
-          dirType: this.file.externalRootDirectory + `Download/`,
-          subPath: 'my.pdf'
-        },
-        destinationUri: this.file.externalRootDirectory + `Download/`,
-
+          dirType: path,
+          subPath: 'Serge_Badio_Jr_Resume.pdf'
+      }
       };
 
       //Save file 
@@ -83,6 +88,15 @@ export class HomePage implements OnInit {
         })
         .catch((error: any) => console.error("Download error", error));
 
+        const fileTransfer: FileTransferObject = this.transfer.create();
+        
+        const url = docUrl;
+        fileTransfer.download(url, path + 'Serge_Badio_Jr_Resume.pdf')
+        .then((entry) => {
+          console.log('download complete: ' + entry.toURL());
+        }, (error) => {
+          console.error("Download error", error)
+        });       
     });
   }
 }

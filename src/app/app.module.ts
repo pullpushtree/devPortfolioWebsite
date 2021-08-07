@@ -14,6 +14,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { Downloader } from '@ionic-native/downloader/ngx';
 import { File } from "@ionic-native/file/ngx";
+import { FileTransfer } from '@ionic-native/file-transfer/ngx';
 
 
 export const firebaseConfig = environment.firebaseConfig;
@@ -31,7 +32,8 @@ export const firebaseConfig = environment.firebaseConfig;
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     Downloader,
-    File
+    File,
+    FileTransfer
   ],
   bootstrap: [AppComponent],
 })
