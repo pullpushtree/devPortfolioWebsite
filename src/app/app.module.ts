@@ -11,7 +11,9 @@ import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
-import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { Downloader } from '@ionic-native/downloader/ngx';
+import { File } from "@ionic-native/file/ngx";
 
 
 export const firebaseConfig = environment.firebaseConfig;
@@ -22,12 +24,15 @@ export const firebaseConfig = environment.firebaseConfig;
     BrowserModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule, // firestore
-    AngularFireAuthModule, // auth
-    AngularFireDatabaseModule, // Database
+    AngularFireAuthModule, // auth    
+    AngularFireStorageModule, // Storage
     IonicModule.forRoot(), 
     AppRoutingModule
   ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    Downloader,
+    File
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
