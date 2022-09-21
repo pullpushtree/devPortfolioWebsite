@@ -30,5 +30,10 @@ npm-debug.log*
 /plugins
 /www
 
+/src/environments/**
+.env.**
+slnx.sqlite
+.suo
+VSWorkspaceState.json
 
 *.cache
