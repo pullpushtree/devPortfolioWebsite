@@ -18,15 +18,19 @@ export class ContactPage implements OnInit {
 
   ngOnInit() {}
 
-  onSubmit(val : any ) {
+  onSubmit(val: any ) {
     this.submitted = true;
-    let msgPayload = {
+    const date: Date = new Date();
+    const date2: number = Date.now();
+    const msgPayload = {
+      subject: val.subject,
       name: val.fname,
       email: val.emailAddress,
-      body: val.body
+      body: val.body,
+      date,
+      date2,
     };
 
-    console.log('msgPayload value ', msgPayload);
 
     this.afs
       .collection('messages')
@@ -36,14 +40,14 @@ export class ContactPage implements OnInit {
       })
       .catch((err) => {
         this.messageFailed();
-        console.log("ERROR => ", err)
+        console.log('ERROR => ', err);
       });
   }
 
   async messageSuccess(){
     await this.toastCtrl.create({
-      message: "Thank You!, Your message has been sent",
-      duration: 3000,
+      message: 'Thank You!, Your message has been sent',
+      duration: 5000,
       position: 'bottom',
       color: 'warning'
 
@@ -52,8 +56,8 @@ export class ContactPage implements OnInit {
 
   async messageFailed(){
     await this.toastCtrl.create({
-      message: "Something went wrong. Please try Again!",
-      duration: 3000,
+      message: 'Something went wrong. Please try Again!',
+      duration: 5000,
       position: 'bottom',
       color: 'danger'
 

@@ -8,6 +8,17 @@
       <h6><strong>Location: </strong> Montreal, QC</h6>
       <br/>
       <ion-item>
+        <ion-label position="floating">Subject</ion-label>
+        <ion-input
+          id="subject"
+          type="text"
+          name="subject"
+          ngModel
+          #nameInput="ngModel"
+          required>
+        </ion-input>
+      </ion-item>
+      <ion-item>
         <ion-label position="floating">Name</ion-label>
         <ion-input
           id="fname"
@@ -23,8 +34,8 @@
           <div *ngIf="nameInput.errors?.required">
             Name is required.
           </div>
-        </div>        
-        
+        </div>
+
       </ion-item>
       <ion-item>
         <ion-label position="floating">Email</ion-label>
@@ -38,7 +49,7 @@
           email>
         </ion-input>
         <div
-          
+
           *ngIf="emailInput.invalid && emailInput.touched">
           Your email is required.
         </div>
@@ -50,24 +61,24 @@
           id="body"
           type="text"
           name="body"
-          ngModel       
+          ngModel
           #bodyInput="ngModel"
           required
           auto-grow="true"
           maxLength="500"
           ></ion-textarea>
         <div
-          
+
           *ngIf="bodyInput.invalid && bodyInput.touched">
           Your message is required.
         </div>
-        
+
       </ion-item>
 
       <ion-row>
         <ion-col>
           <ion-button
-            shape="round" 
+            shape="round"
             type="submit"
             class="button-gradient"
             expand="block"

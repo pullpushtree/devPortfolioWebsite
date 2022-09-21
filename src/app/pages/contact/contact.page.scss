@@ -3,9 +3,9 @@
     font-family: 'Roboto', sans-serif;
 }
 
-h3 {    
+h3 {
     font-weight: 600;
-    font-size: 26px !important;    
+    font-size: 26px !important;
 }
 h6 {
     margin: 0px;
@@ -18,13 +18,13 @@ h6 {
 p {
     font-weight: 400;
     font-size: 18px !important;
-    font-family: "Raleway", sans-serif;    
+    font-family: "Raleway", sans-serif;
     font-weight: 600;
 }
 
 //DESKTOP SCREEN
 @media (min-width: 768px) {
-    
+
     #contactContainer {
         width:  80%;
         display:  flex ;
@@ -34,7 +34,7 @@ p {
         width: 100vw;
         background-image: linear-gradient(154deg, #eeec00 0%, #e3be00 30%, #dea800 50%);
     }
-    
+
     #contacForm {
         background:  #ffffff;
         padding: 0px 50px 50px 50px;
@@ -42,11 +42,11 @@ p {
         color: rgb(39, 39, 46);
         width: 500px;
     }
-    
+
     .input {
         width:  80%;
         font-size: 18px;
-        margin: 10px 0; 
+        margin: 10px 0;
         padding: 7px 15px;
         border: none;
         color: #fff;
@@ -54,36 +54,36 @@ p {
 
     .form-title {
         font-size: 48px;
-        text-align: center; 
+        text-align: center;
         margin-bottom: 20px;
     }
-    
+
     button {
         font-size: 18px;
         border-radius: 5px;
-       
+
         padding: 7px 15px;
         color: #fff;
         transition: background-color 100mx;
     }
-    
+
     button:hover {
-        
+
         cursor: pointer;
     }
 
-    .button-gradient {        
+    .button-gradient {
         color: #1d1d1d;
-        --background: linear-gradient(154deg, #eeec00 0%, #e3be00 30%, #dea800 50%);        
+        --background: linear-gradient(154deg, #eeec00 0%, #e3be00 30%, #dea800 50%);
         color: linear-gradient(154deg, #eeec00 0%, #e3be00 30%, #dea800 50%);
     }
-    
+
 }
 
 //MOBILE SCREEN
 @media (max-width: 768px) {
     #contactContainer {
-        
+
         display:  flex ;
         justify-content: center;
         align-items: center;
@@ -91,14 +91,14 @@ p {
         width: 100vw;
         background-image: linear-gradient(154deg, #eeec00 0%, #e3be00 30%, #dea800 50%);
     }
-    
+
     #contacForm {
         background:  #ffffff;
         padding: 0px 30px 30px 30px;
         //border-radius: 5px;
-        color: rgb(39, 39, 46);        
+        color: rgb(39, 39, 46);
     }
-    
+
     .input {
         width:  80%;
         font-size: 18px;
@@ -107,16 +107,16 @@ p {
         border: none;
         color:lightslategray
     }
-    
+
     .form-title {
         font-size: 48px;
-        text-align: center; 
+        text-align: center;
         margin-bottom: 20px;
     }
-    
-    .button-gradient {        
+
+    .button-gradient {
         color: #1d1d1d;
-        --background: linear-gradient(154deg, #eeec00 0%, #e3be00 30%, #dea800 50%);        
+        --background: linear-gradient(154deg, #eeec00 0%, #e3be00 30%, #dea800 50%);
         color: linear-gradient(154deg, #eeec00 0%, #e3be00 30%, #dea800 50%);
     }
 }
