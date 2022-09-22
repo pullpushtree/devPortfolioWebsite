@@ -1,5 +1,9 @@
 {
   "projects": {
-    "default": "devportfoliowebsite-prod"
-  }
+    "dev": "devportfoliowebsite",
+    "default": "devportfoliowebsite",
+    "prod": "devportfoliowebsite-prod"
+  },
+  "targets": {},
+  "etags": {}
 }
