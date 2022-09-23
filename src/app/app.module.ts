@@ -19,22 +19,21 @@ import { FileTransfer } from '@ionic-native/file-transfer/ngx';
 
 export const firebaseConfig = environment.firebaseConfig;
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
-  imports: [
-    BrowserModule,
-    AngularFireModule.initializeApp(firebaseConfig),
-    AngularFirestoreModule, // firestore
-    AngularFireAuthModule, // auth
-    AngularFireStorageModule, // Storage
-    IonicModule.forRoot(),
-    AppRoutingModule
-  ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    Downloader,
-    File,
-    FileTransfer
-  ],
-  bootstrap: [AppComponent],
+    declarations: [AppComponent],
+    imports: [
+        BrowserModule,
+        AngularFireModule.initializeApp(firebaseConfig),
+        AngularFirestoreModule,
+        AngularFireAuthModule,
+        AngularFireStorageModule,
+        IonicModule.forRoot(),
+        AppRoutingModule
+    ],
+    providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+        Downloader,
+        File,
+        FileTransfer
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule {}
