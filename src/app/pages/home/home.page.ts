@@ -1,4 +1,3 @@
-import { convertActionBinding } from '@angular/compiler/src/compiler_util/expression_converter';
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { AngularFireStorage } from '@angular/fire/storage';
 import {  Downloader,  DownloadRequest,  NotificationVisibility,} from '@ionic-native/downloader/ngx';
@@ -12,8 +11,8 @@ import { Platform } from '@ionic/angular';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
-  glowEffect = false;
   @ViewChild('caseBtn', { read: ElementRef }) caseBtn: ElementRef;
+  glowEffect = false;
 
   constructor(
     private downloader: Downloader,
@@ -58,15 +57,15 @@ export class HomePage implements OnInit {
   openResume(url: string) {
     window.open(url, '_system', 'location=yes');
   }
-  
+
   async downloadResume() {
 
-    try{  
+    try{
     await this.platform.ready();
-    await this.afStrage.storage.ref('Serge_Badio_Jr_Resume.pdf')     
+    await this.afStrage.storage.ref('Serge_Badio_Jr_Resume.pdf')
     .getDownloadURL()
-    .then((docUrl) => {  
-      
+    .then((docUrl) => {
+
       let path = null;
       if(this.platform.is('cordova')){
 
@@ -75,44 +74,44 @@ export class HomePage implements OnInit {
         } else if (this.platform.is('android')) {
           path = this.file.dataDirectory;
         } else {
-  
+
         }
-  
-        let request: DownloadRequest = {
+
+        const request: DownloadRequest = {
           uri: docUrl,
           title: 'Serge Badio Jr Resume',
           description: 'PDF Resume',
           mimeType: 'application/pdf',
           visibleInDownloadsUi: true,
-          notificationVisibility: NotificationVisibility.VisibleNotifyCompleted,        
+          notificationVisibility: NotificationVisibility.VisibleNotifyCompleted,
           destinationInExternalFilesDir: {
             dirType: path,
             subPath: 'Serge_Badio_Jr_Resume.pdf'
           }
         };
-  
+
         this.downloader.download(request)
           .then((location: string) =>{
-            console.log('File downloaded at:' + location)
+            console.log('File downloaded at:' + location);
           })
-          .catch((error: any) => console.error("Download error", error));
-  
+          .catch((error: any) => console.error('Download error', error));
+
           const fileTransfer: FileTransferObject = this.transfer.create();
-        
+
           const url = docUrl;
         fileTransfer.download(url, path + 'Serge_Badio_Jr_Resume.pdf')
         .then((entry) => {
           console.log('download complete: ' + entry.toURL());
         }, (error) => {
-          console.error("Download error", error)
+          console.error('Download error', error);
         });
       } else {
         const url = docUrl;
         this. openResume(url);
       }
-    }).catch(err => console.log("Error getting file", err));
+    }).catch(err => console.log('Error getting file', err));
     } catch (err) {
-      console.log("Error downloading file occured", err)
+      console.log('Error downloading file occured', err);
     }
   }
 }
